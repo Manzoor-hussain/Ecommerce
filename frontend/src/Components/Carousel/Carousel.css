@@ -1,0 +1,20 @@
+/* Carousel.css */
+
+.carousel-container {
+    max-width: 100%;
+    overflow: hidden;
+  }
+  
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .carousel-slide {
+    flex: 0 0 100%; /* Make slides take full width */
+    box-sizing: border-box;
+    padding: 1rem;
+  }
+  
+  /* Additional styles based on your design preferences */
+  
