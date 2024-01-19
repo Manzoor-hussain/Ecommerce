@@ -27,6 +27,8 @@ import { AuthProvider } from './utils/AuthContext'
 import { useAuth } from "./utils/AuthContext";
 
 import { HomePage } from "./containers/chat/home";
+
+import {AddCard } from "./containers/chat/addcard"
 function App() {
 
 
@@ -47,12 +49,13 @@ function App() {
     
           
           <Routes>
-          <Route path="/finalscr" element={<SignUpFinalScr />} />
+          {/* <Route path="/finalscr" element={<SignUpFinalScr />} />
         <Route path="/newpass" element={username==null?<NewPass />:<Navigate to="/" />} />
         <Route path="login" element={username==null ? <LoginEmail /> :<Navigate to="/" />} />
         <Route path="/signup" element={username == null?<SignUpDefault />:< Navigate to="/"/>} />
-        <Route path="/confirm-password" element={username==null?<ConfirmPass />:<Navigate to="/"/>} />
+        <Route path="/confirm-password" element={username==null?<ConfirmPass />:<Navigate to="/"/>} /> */}
         <Route path="/" element={<HomePage/>}/>
+        <Route path="/add-cart" element={<AddCard/>}/>
            
            
           

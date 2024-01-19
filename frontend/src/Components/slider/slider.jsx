@@ -13,13 +13,13 @@ import { ASSETS } from '../../assets/path';
 import { OneComponent } from './oneComponent';
 import "./Customswiper.css"
 export const Slider =()=> {
-    const myArray = Array(5).fill(null);
+    const myArray = Array(10).fill(null);
   return (
     <>
     <div className='w-[80%] mx-auto '>
      
     <Swiper
-        slidesPerView={3}
+        slidesPerView={4}
         grid={{
           rows: 1,
         }}

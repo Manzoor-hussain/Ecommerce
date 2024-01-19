@@ -475,6 +475,7 @@ const updatedConversation = clone.map(item => {
           onClick={() => setPromtLimitmodal(!PromtLimitmodal)}
         />
        
+
       )}
       <Navbar
         onOpenModal={() => setShowModal(!showModal)}
@@ -486,7 +487,7 @@ const updatedConversation = clone.map(item => {
     <Carousel/>
    </div>
     
-
+    
      
        
       </div>

@@ -37,10 +37,10 @@ export const ThumbSlider =()=>{
         className="mySwiper2"
       >
         <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+          <img src="https://sasta-bazaar-shop.myshopify.com/cdn/shop/products/download-2023-05-17T041814.979_1080x1080.jpg?v=1692725468" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+          <img src="https://sasta-bazaar-shop.myshopify.com/cdn/shop/products/download-2023-05-17T041816.105_180x180.jpg?v=1692725468" />
         </SwiperSlide>
         <SwiperSlide>
           <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
@@ -77,19 +77,19 @@ export const ThumbSlider =()=>{
         className="mySwiper"
       >
         <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+          <img src="https://sasta-bazaar-shop.myshopify.com/cdn/shop/products/download-2023-05-17T041816.105_180x180.jpg?v=1692725468" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+          <img src="https://sasta-bazaar-shop.myshopify.com/cdn/shop/products/download-2023-05-17T041816.105_180x180.jpg?v=1692725468" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+          <img src="https://sasta-bazaar-shop.myshopify.com/cdn/shop/products/download-2023-05-17T041816.105_180x180.jpg?v=1692725468" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+          <img src="https://sasta-bazaar-shop.myshopify.com/cdn/shop/products/download-2023-05-17T041816.105_180x180.jpg?v=1692725468" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+          <img src="https://sasta-bazaar-shop.myshopify.com/cdn/shop/products/download-2023-05-17T041816.105_180x180.jpg?v=1692725468" />
         </SwiperSlide>
         <SwiperSlide>
           <img src="https://swiperjs.com/demos/images/nature-6.jpg" />

@@ -10,14 +10,30 @@
     text-align: center;
     font-size: 18px;
     background: #fff;
-    height: calc((100% - 30px) / 2) !important;
+    max-height: 800px !important;
+    /* height: calc((100% - 30px) / 2) !important; */
   
     /* Center slide text vertically */
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  
+  .mySwiper_home .swiper-slide .swiper-pagination-bullets .swiper-pagination-bullet {
+
+   width: 20px !important;
+   height: 20px !important;
+
+  }
+  .swiper-pagination {
+    position: relative !important;
+    margin-top: 20px;
+
+  }
+  .swiper-pagination .swiper-pagination-bullet{
+    width: 15px !important;
+    height: 15px !important;
+
+  }
   
     
   

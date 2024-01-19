@@ -1,6 +1,7 @@
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { ASSETS } from '../../assets/path';
+import { NavLink } from "react-router-dom";
 export const OneComponent=()=>{
 
 
@@ -9,6 +10,10 @@ export const OneComponent=()=>{
         <>
          
             <div>
+            <NavLink
+          to="/add-cart"
+         
+        >
                 <div>
                     <img src={ASSETS.BANNER} alt="" />
 
@@ -19,6 +24,7 @@ export const OneComponent=()=>{
                     <span className='font-bold text-red-800'>Rs ,739239</span>
                     <span className='line-through text-[#b4b4b4] mx-5'>434</span>
                 </div>
+                </NavLink>
             </div>
       
         

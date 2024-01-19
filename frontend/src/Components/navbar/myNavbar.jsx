@@ -1,6 +1,8 @@
 
+import { NavLink } from "react-router-dom";
 import { ASSETS } from "../../assets/path";
 // import {SEARCH_ICON} from "../../assets/path"
+
 export const  Navigation = ()=>{
 
 
@@ -9,11 +11,11 @@ export const  Navigation = ()=>{
             <div className="w-full">
                 <div className="w-[80%] flex justify-between mx-auto py-4 items-center">
                 <div className="">
-                <img src={ASSETS.LOGO} className="h-6 sm:h-5 md:h-6 lg:h-8" />
+                <NavLink to="/"> <img src={ASSETS.LOGO} className="h-6 sm:h-5 md:h-6 lg:h-8" /> </NavLink>
                 </div>
                 <div className="w-[27%]">
                     <ul className="flex justify-between justify-start text-md font-bold">
-                        <li>Home</li>
+                        <NavLink to="/"><li>Home</li></NavLink> 
                         <li>Shop</li>
                         <li>About us</li>
                         <li>Contact us</li>
@@ -46,9 +48,7 @@ export const  Navigation = ()=>{
 
 
             </div>
-            <div className="w-full">
-                <img src={ASSETS.BANNER} alt="banner" />
-            </div>
+          
             
             </>
     )
