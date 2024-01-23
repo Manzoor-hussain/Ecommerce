@@ -1,16 +1,9 @@
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
-import { ChatComponent } from "./containers/chat";
+
 import SecondNav from "./Components/User/Desktop/Container/SecondNav";
-import UserTable from "./containers/admin/UserTable";
-import Statistics from "./containers/admin/Statistics";
-import SourcesModels from "./containers/admin/SourcesModels";
-import { SignUpDefault } from "./containers/auth/SignUp/SignUpDefault";
+
 //import { StepForm } from "./containers/auth/SignUp/StepForm";
-import { SignUp } from "./containers/auth/SignUp/SignUp";
-import { SignUpFinalScr } from "./containers/auth/SignUp/SignupFinalScr";
-import { LoginEmail } from "./containers/auth/SignUp/LoginEmail";
-import { NewPass } from "./containers/auth/SignUp/NewPass";
-import { SubscriptionModal } from "./Components/modal/SubscriptionModal";
+
 // import HomePage from "./Components/User/HomePage/HomePage";
 import { useSelector ,useDispatch} from "react-redux";
 import {login} from './redux/actions/LoginActions'
@@ -29,6 +22,12 @@ import { useAuth } from "./utils/AuthContext";
 import { HomePage } from "./containers/chat/home";
 
 import {AddCard } from "./containers/chat/addcard"
+import { Shop } from "./containers/chat/Shop";
+import { About } from "./containers/chat/aboutus";
+import ContactUs from "./containers/chat/Contact";
+
+
+
 function App() {
 
 
@@ -55,7 +54,10 @@ function App() {
         <Route path="/signup" element={username == null?<SignUpDefault />:< Navigate to="/"/>} />
         <Route path="/confirm-password" element={username==null?<ConfirmPass />:<Navigate to="/"/>} /> */}
         <Route path="/" element={<HomePage/>}/>
-        <Route path="/add-cart" element={<AddCard/>}/>
+        <Route path="/add-cart/:productId" element={<AddCard/>}/>
+        <Route path="/Shop" element={<Shop/>}/>
+        <Route path="/aboutus" element={<About/>}/>
+        <Route path="/contactus" element={<ContactUs/>}/>
            
            
           

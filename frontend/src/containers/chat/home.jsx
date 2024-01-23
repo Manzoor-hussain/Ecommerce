@@ -1,5 +1,5 @@
 // import { Slider } from "@material-ui/core"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { Footer } from "../../Components/footer/footer"
 import { AnnouncementBar } from "../../Components/navbar/announcement"
 import { Navigation } from "../../Components/navbar/myNavbar"
@@ -9,9 +9,98 @@ import { CartView } from "../../Components/Cart/cartview"
 import { ASSETS } from "../../assets/path"
 
 import {ExampleComponent} from "../../Components/example/examplecomponent"
+import {Social} from "../../Components/Cart/social"
+import { CartButton } from "../../Components/Button/CartButton"
+import { FreeDlivery } from "../../Components/footer/foooterup"
+ import axios from "axios"
+import { ApiServer } from "../../ApiConstant"
  
 export const HomePage = () => {
+   const  [allProduct ,setAllProduct]=useState([])
+
+
+    var examplelist=[
+        {
+            "id": "441421fd-5266-40fc-bd5d-04db99e54600",
+            "images": [
+                {
+                    "image": "/media/images/one_Beeswax.webp"
+                },
+                {
+                    "image": "/media/images/two_Beeswax.webp"
+                },
+                {
+                    "image": "/media/images/three_Beeswax.webp"
+                },
+                {
+                    "image": "/media/images/four_Beeswax.webp"
+                },
+                {
+                    "image": "/media/images/five_Beeswax.webp"
+                }
+            ],
+            "price": 3000,
+            "discount": 1000,
+            "name": "Beeswax",
+            "description": "Pure Home Beeswax Polish Furniture Care Beeswax Home Cleaning",
+            "created_at": "2024-01-21T18:00:33.262747Z"
+        },
+        {
+            "id": "441421fd-5266-40fc-bd5d-04db99e54644",
+            "images": [
+                {
+                    "image": "/media/images/one_Beeswax.webp"
+                },
+                {
+                    "image": "/media/images/two_Beeswax.webp"
+                },
+                {
+                    "image": "/media/images/three_Beeswax.webp"
+                },
+                {
+                    "image": "/media/images/four_Beeswax.webp"
+                },
+                {
+                    "image": "/media/images/five_Beeswax.webp"
+                }
+            ],
+            "price": 5000,
+            "discount": 1000,
+            "name": "Electric EMS",
+            "description": "Electric EMS Foot Massager Pad",
+            "created_at": "2024-01-21T18:00:33.262747Z"
+        }
+    ]
  
+ useEffect(()=>{
+    const fetchData = async () => {
+      
+
+      try {
+        const response = await axios.get(ApiServer + "/api/all-product/");
+
+        const responseDat = response.data;
+       
+        setAllProduct(responseDat)
+        console.log("profile data", responseDat);
+
+        // ... do something with the response data
+      } catch (error) {
+        // Handle error
+        console.error(error);
+        console.log("profile error");
+        // ... handle the error
+      }
+    }
+
+    fetchData();
+  }, []);
+
+
+
+
+
+
 
     return(
 
@@ -23,7 +112,15 @@ export const HomePage = () => {
                 <img src={ASSETS.BANNER} alt="banner" />
             </div>
 <div className="flex py-6 items-center justify-center my-10"><h2 className="font-bold text-xl ">Trending Now</h2></div>
-<Slider/>
+{allProduct &&
+    <Slider
+allProduct={allProduct}
+
+
+/>
+
+}
+
 
 <div className="mx-10 flex items-center justify-center">
    
@@ -42,6 +139,13 @@ export const HomePage = () => {
              CrossPrice="2323"
             
             />
+            <CartButton/>
+            <div className="py-3"></div>
+            <Social
+             height="10"
+             width="10"
+            />
+        
     </div>
 </div>
 
@@ -49,14 +153,24 @@ export const HomePage = () => {
 
 <div className="flex py-6 items-center justify-center my-10"> <span  className='font-bold leading-10 text-[30px] tracking-wide mb-10 '>Everything you Need is already here 😍😍😍</span></div>
 
-<Slider/>
+{allProduct &&
+    <Slider
+allProduct={allProduct}
+
+
+/>
+
+}
 
 
 <br></br>
 
 <div className="w-[80%] mx-auto flex  my-10">
     <div className="w-1/2 h-[80vh] mr-8">
-    <ThumbSlider/>
+    <ThumbSlider
+    all_images={examplelist[0].images}
+    
+    />
     </div>
     <div className="w-1/2 py-4 px-4">
     <ExampleComponent 
@@ -65,6 +179,12 @@ export const HomePage = () => {
       CrossPrice="3000"
     
     />
+      <CartButton/>
+      <div className="py-4"></div>
+      <Social
+             height="10"
+             width="10"
+            />
   
     </div>
     <div>
@@ -73,6 +193,10 @@ export const HomePage = () => {
    
 
 </div>
+
+<div class="border-b border-gray-300 my-4"></div>
+
+<FreeDlivery/>
 
 
 <Footer/>

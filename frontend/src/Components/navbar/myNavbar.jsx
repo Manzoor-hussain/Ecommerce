@@ -15,10 +15,13 @@ export const  Navigation = ()=>{
                 </div>
                 <div className="w-[27%]">
                     <ul className="flex justify-between justify-start text-md font-bold">
-                        <NavLink to="/"><li>Home</li></NavLink> 
-                        <li>Shop</li>
-                        <li>About us</li>
-                        <li>Contact us</li>
+                        <NavLink to="/"><li className="hover:text-yellow-400 focus:outline-none focus:ring focus:border-blue-300">Home</li></NavLink> 
+                      <NavLink to="/shop"><li className="hover:text-yellow-400 focus:outline-none focus:ring focus:border-blue-300">Shop</li></NavLink>  
+                     
+                        <NavLink to="/aboutus"><li className="hover:text-yellow-400 focus:outline-none focus:ring focus:border-blue-300">About us</li></NavLink>  
+                        
+                        <NavLink to="/contactus"><li className="hover:text-yellow-400 focus:outline-none focus:ring focus:border-blue-300">Contact us</li></NavLink>  
+                       
                     </ul>
                 </div>
                 <div className="flex w-[9%] text-black justify-between items-center">

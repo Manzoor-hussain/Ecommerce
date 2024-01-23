@@ -12,11 +12,12 @@ import 'swiper/css/thumbs';
 import './thumb.css';
 // import required modules
 import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
+import { ApiServer } from '../../ApiConstant';
 
 
+ApiServer
 
-
-export const ThumbSlider =()=>{
+export const ThumbSlider =( {all_images})=>{
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
 
@@ -36,7 +37,16 @@ export const ThumbSlider =()=>{
         modules={[FreeMode, Navigation, Thumbs]}
         className="mySwiper2"
       >
-        <SwiperSlide>
+         {all_images && all_images.length > 0 && all_images.map((item, index) => (
+               <SwiperSlide key={index}>
+
+        <img src={ApiServer + item.image} alt="image"  />
+               </SwiperSlide>
+
+         ))}
+
+
+        {/* <SwiperSlide>
           <img src="https://sasta-bazaar-shop.myshopify.com/cdn/shop/products/download-2023-05-17T041814.979_1080x1080.jpg?v=1692725468" />
         </SwiperSlide>
         <SwiperSlide>
@@ -65,7 +75,7 @@ export const ThumbSlider =()=>{
         </SwiperSlide>
         <SwiperSlide>
           <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
-        </SwiperSlide>
+        </SwiperSlide> */}
       </Swiper>
       <Swiper
         onSwiper={setThumbsSwiper}
@@ -76,7 +86,14 @@ export const ThumbSlider =()=>{
         modules={[FreeMode, Navigation, Thumbs]}
         className="mySwiper"
       >
-        <SwiperSlide>
+        {all_images && all_images.length > 0 &&  all_images.map((item, index) => (
+               <SwiperSlide key={index}>
+
+        <img src={ApiServer + item.image} alt="image"  />
+               </SwiperSlide>
+
+         ))}
+        {/* <SwiperSlide>
           <img src="https://sasta-bazaar-shop.myshopify.com/cdn/shop/products/download-2023-05-17T041816.105_180x180.jpg?v=1692725468" />
         </SwiperSlide>
         <SwiperSlide>
@@ -105,7 +122,7 @@ export const ThumbSlider =()=>{
         </SwiperSlide>
         <SwiperSlide>
           <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
-        </SwiperSlide>
+        </SwiperSlide> */}
       </Swiper>
    
     </>

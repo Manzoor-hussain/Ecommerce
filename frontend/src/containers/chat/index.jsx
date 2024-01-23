@@ -4,7 +4,7 @@ import Navbar from "../../Components/navbar/Navbar";
 import AttentionNote from "../../Components/AttentionNote/AttentionNote";
 import Button from "../../Components/Button/Button";
 import { Faq } from "./faq";
-import { AboutUs } from "./aboutUs";
+// import { AboutUs } from "./aboutus";
 import { UserUpdate } from "./userProfile";
 //import { useLocation } from "react-router-dom";
 import { SubUnsubUsers } from "./SubUnsubUsers";
