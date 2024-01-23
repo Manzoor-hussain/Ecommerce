@@ -4,6 +4,7 @@ import { Navigation } from '../../Components/navbar/myNavbar';
 import { Social } from '../../Components/Cart/social';
 import { FreeDlivery } from '../../Components/footer/foooterup';
 import { Footer } from '../../Components/footer/footer';
+import {WhatsAppButton} from "../../Components/Button/WhatsappButton"
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -38,6 +39,7 @@ const ContactUs = () => {
             <span className="font-medium">
                 Contact
             </span>
+           
         </div>
        
             <Social 
@@ -50,6 +52,7 @@ const ContactUs = () => {
 </div>
     <div className="container mx-auto my-10">
       <h2 className="text-3xl font-bold mb-5 text-center">Contact Us</h2>
+      {/* <WhatsAppButton/> */}
       <form onSubmit={handleSubmit} className="max-w-md mx-auto">
         <div className="mb-4">
           <label htmlFor="name" className="block text-sm font-medium text-gray-700">

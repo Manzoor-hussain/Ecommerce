@@ -1,0 +1,50 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title></title>
+    <style type="text/css">
+        @font-face {
+            font-family: 'flama-condensed';
+            font-weight: 100;
+            src: url('http://assets.vervewine.com/fonts/FlamaCond-Medium.eot');
+            src: url('http://assets.vervewine.com/fonts/FlamaCond-Medium.eot?#iefix') format('embedded-opentype'),
+            url('http://assets.vervewine.com/fonts/FlamaCond-Medium.woff') format('woff'),
+            url('http://assets.vervewine.com/fonts/FlamaCond-Medium.ttf') format('truetype');
+        }
+        @font-face {
+            font-family: 'Muli';
+            font-weight: 100;
+            src: url('http://assets.vervewine.com/fonts/muli-regular.eot');
+            src: url('http://assets.vervewine.com/fonts/muli-regular.eot?#iefix') format('embedded-opentype'),
+            url('http://assets.vervewine.com/fonts/muli-regular.woff2') format('woff2'),
+            url('http://assets.vervewine.com/fonts/muli-regular.woff') format('woff'),
+            url('http://assets.vervewine.com/fonts/muli-regular.ttf') format('truetype'); }
+    </style>
+</head>
+<body style="margin: 0px;padding: 0px;">
+<div style="margin-right: auto; margin-left: auto; max-width: 768px; border-radius: 9px;padding: 29px;border: 1px solid #cccccc">
+<!--    <div style="text-align: center">-->
+<!--        <img src="{{logo_img_url}}" style="width: 75px;margin-top: 20px;margin-bottom: 20px">-->
+<!--        <p style="margin-bottom: 0px;margin-top: 0px;font-size: 24px;font-weight: bold">Interview Submit</p>-->
+<!--    </div>-->
+
+    <p style="margin-bottom: 20px; font-size: 15px;">Dear Sasta Bazar</p>
+    <p style="margin-bottom: 20px; font-size: 15px;">There is a Client Information.</p>
+    <p style="margin-bottom: 20px; font-size: 15px;">Name: {{data.name}} </p>
+    <p style="margin-bottom: 20px; font-size: 15px;">Address {{data.address}} </p>
+    <p style="margin-bottom: 20px; font-size: 15px;">Phone: {{data.mobile}} </p>
+    <p style="margin-bottom: 20px; font-size: 15px;">Province: {{data.province}} </p>
+
+    <p style="margin: 20px 0px;font-size: 14px;">Best regards,</p>
+    <p style="margin-bottom: 25px;font-size: 14px;">Hiring</p>
+    <a style="color: #1A91EB;font-size: 14px" href="https://hiring.systems/" target="_blank">https://hiring.systems</a>
+
+</div>
+
+</body>
+
+</html>

@@ -8,7 +8,7 @@ const MeetingModal = ({ modalOpen, setModalOpen, onClose, SingleProduct}) => {
 
     const [formData, setFormData] = useState({
         name: '',
-        mobile:0,
+        mobile:'',
         address: '',
         province:'',
         district:'',
@@ -22,6 +22,17 @@ const MeetingModal = ({ modalOpen, setModalOpen, onClose, SingleProduct}) => {
         });
       };
 
+    // const handleChange = (e) => {
+    //     const { name, value } = e.target;
+      
+    //     // Convert the value to an integer if the field is 'mobile'
+    //     const parsedValue = name === 'mobile' ? parseInt(value, 10) : value;
+      
+    //     setFormData({
+    //       ...formData,
+    //       [name]: parsedValue,
+    //     });
+    //   };
 
       const PlaceOrder = async (updatedFormData) => {
           

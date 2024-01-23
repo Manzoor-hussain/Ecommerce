@@ -6,7 +6,7 @@ from rest_framework.response import Response
 from rest_framework import status
 from .models import Product, Order
 from django.http import Http404
-
+from .email_handler import send_email
 from .serializers import ProductSerializer, OrderSerializer
 
 import pdb
@@ -57,6 +57,8 @@ class PostOrder(APIView):
         serializer = OrderSerializer(data=data_)
         if serializer.is_valid():
             # serializer.save()
+            # send_email('Thank You', 'superadmin/order.html',
+            #    "manzoor.hussain@ml1.ai" , context={"data":data_})
             pdb.set_trace()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         pdb.set_trace()

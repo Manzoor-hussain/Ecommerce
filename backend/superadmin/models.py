@@ -3,10 +3,6 @@ from django.db import models
 # Create your models here.
 import uuid
 
-from django.db import models
-from django.contrib.postgres.fields import ArrayField
-from django.contrib import admin
-
 class Product(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     price = models.IntegerField()
@@ -20,6 +16,8 @@ class Product(models.Model):
 class Image(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='images')
     image = models.ImageField(upload_to='images/')
+    def __str__(self):
+        return self.image.name
 
     
 class Order(models.Model):
@@ -28,7 +26,7 @@ class Order(models.Model):
     quentity = models.IntegerField()
     TotalPrice = models.IntegerField()
     name = models.CharField(max_length=200)
-    mobile = models.IntegerField()
+    mobile = models.CharField(max_length=11)
     province = models.CharField(max_length=200)
     district = models.CharField(max_length=200)
     address = models.TextField()
